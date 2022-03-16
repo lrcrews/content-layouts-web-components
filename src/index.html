@@ -9,6 +9,24 @@
     <script nomodule src="/build/content-layouts.js"></script>
   </head>
   <body>
-    <my-component first="Stencil" last="'Don't call me a framework' JS"></my-component>
+    <cl-two>
+      <div slot="image-panel"><div>image here</div></div>
+      <div slot="supplemental-content-panel">
+        <h3>Some Header</h3>
+        <ul>
+          <li>Item One</li>
+          <li>Item Two</li>
+          <li>Item Three</li>
+          <li>Item Four</li>
+          <li>Item Five</li>
+        </ul>
+      </div>
+      <div slot="primary-content-panel">
+        <h1>Main header</h1>
+        <p>Some content about whatever yhis site is... about.</p>
+        <p>More stuff, maybe some images somewhere, you know.. content!</p>
+      </div>
+      <div slot="additional-image-panel">additional image here</div>
+    </cl-two>
   </body>
 </html>

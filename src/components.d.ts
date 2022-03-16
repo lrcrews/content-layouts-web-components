@@ -6,56 +6,48 @@
  */
 import { HTMLStencilElement, JSXBase } from "@stencil/core/internal";
 export namespace Components {
-    interface MyComponent {
+    interface ClTwo {
         /**
-          * The first name
+          * Optional value to override `'background-color': 'rgb(250, 235, 215)'` on the content in `slot` "primary-content-panel"
          */
-        "first": string;
+        "primaryBackgroundColor": string;
         /**
-          * The last name
+          * Optional value to override `'background-color': 'rgb(222, 184, 135)'` on the content in `slot` "supplemental-content-panel"
          */
-        "last": string;
-        /**
-          * The middle name
-         */
-        "middle": string;
+        "supplementalBackgroundColor": string;
     }
 }
 declare global {
-    interface HTMLMyComponentElement extends Components.MyComponent, HTMLStencilElement {
+    interface HTMLClTwoElement extends Components.ClTwo, HTMLStencilElement {
     }
-    var HTMLMyComponentElement: {
-        prototype: HTMLMyComponentElement;
-        new (): HTMLMyComponentElement;
+    var HTMLClTwoElement: {
+        prototype: HTMLClTwoElement;
+        new (): HTMLClTwoElement;
     };
     interface HTMLElementTagNameMap {
-        "my-component": HTMLMyComponentElement;
+        "cl-two": HTMLClTwoElement;
     }
 }
 declare namespace LocalJSX {
-    interface MyComponent {
+    interface ClTwo {
         /**
-          * The first name
+          * Optional value to override `'background-color': 'rgb(250, 235, 215)'` on the content in `slot` "primary-content-panel"
          */
-        "first"?: string;
+        "primaryBackgroundColor"?: string;
         /**
-          * The last name
+          * Optional value to override `'background-color': 'rgb(222, 184, 135)'` on the content in `slot` "supplemental-content-panel"
          */
-        "last"?: string;
-        /**
-          * The middle name
-         */
-        "middle"?: string;
+        "supplementalBackgroundColor"?: string;
     }
     interface IntrinsicElements {
-        "my-component": MyComponent;
+        "cl-two": ClTwo;
     }
 }
 export { LocalJSX as JSX };
 declare module "@stencil/core" {
     export namespace JSX {
         interface IntrinsicElements {
-            "my-component": LocalJSX.MyComponent & JSXBase.HTMLAttributes<HTMLMyComponentElement>;
+            "cl-two": LocalJSX.ClTwo & JSXBase.HTMLAttributes<HTMLClTwoElement>;
         }
     }
 }

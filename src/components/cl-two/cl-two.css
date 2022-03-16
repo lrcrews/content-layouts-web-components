@@ -1,0 +1,44 @@
+:host {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: row;
+  margin: 0 auto;
+  max-width: 62.4rem;
+  min-height: 100vh;
+  padding: 1.25rem;
+  width: 100%;
+}
+
+:host > .primary-pane {
+  flex-grow: 4;
+}
+
+:host > .pane-divider {
+  width: 1.25rem;
+}
+
+:host > .secondary-pane {
+  flex-grow: 3;
+}
+
+:host > .secondary-pane > * {
+  width: 100%;
+}
+
+:host > .secondary-pane > .slot-divider {
+  height: 1.25rem;
+}
+
+/* narrow */
+@media (max-width: 50rem) {
+  :host {
+    display: block;
+  }
+}
+
+/* very narrow */
+@media (max-width: 25rem) {
+  :host {
+    padding: 1.25rem 0.75rem;
+  }
+}
